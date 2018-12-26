@@ -1,5 +1,5 @@
-const React = require ("react");
-const ReactDOM = require ("react-dom");
+import React from "react";
+import ReactDOM from "react-dom";
 
 const Header = () => (
   <div>
@@ -7,4 +7,4 @@ const Header = () => (
   </div>
 )
 
-module.exports = Header;
+export default Header;

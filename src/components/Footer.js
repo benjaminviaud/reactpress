@@ -1,5 +1,5 @@
-const React = require ("react");
-const ReactDOM = require ("react-dom");
+import React from "react";
+import ReactDOM from "react-dom";
 
 const Footer = () => (
   <div>
@@ -7,4 +7,4 @@ const Footer = () => (
   </div>
 )
 
-module.exports = Footer;
+export default Footer;

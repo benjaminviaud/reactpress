@@ -1,6 +1,6 @@
-const React = require ("react");
-const ReactDOM = require ("react-dom");
-const Layout = require ("../components/layout");
+import React from "react";
+import ReactDOM from "react-dom";
+import Layout from "../components/layout";
 
 const Home = () => (
   <Layout>
@@ -10,4 +10,4 @@ const Home = () => (
   </Layout>
 )
 
-module.exports = Home;
+export default Home;
