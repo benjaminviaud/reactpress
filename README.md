@@ -18,7 +18,7 @@ Starter theme for Wordpress
 
 ## In progress or in the near future
 - REST API Wordpress
-- prop-types or typescript for typechecking ?
+- prop-types or typescript or flow for typechecking ?
 - tree-shaking
 - 404 error (At the moment .htaccess redirect 404 error to index.html => patch to resolve url 404 not found);
 
