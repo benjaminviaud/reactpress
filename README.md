@@ -18,8 +18,14 @@ Starter theme for Wordpress
 
 ## In progress or in the near future
 - REST API Wordpress
-- typescript
+- prop-types or typescript or flow for typechecking ?
 - tree-shaking
+- 404 error (At the moment .htaccess redirect 404 error to index.html => patch to resolve url 404 not found);
+
+## Improvements to plan
+- method fetch in components/Nav.js
+- config yml file
+- browserStack test with Karma
 
 ## Fix bugs
 - **@import in scss file with sass-loader**
