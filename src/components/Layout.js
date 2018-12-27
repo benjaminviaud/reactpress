@@ -1,16 +1,31 @@
-const React = require ("react");
-const ReactDOM = require ("react-dom");
-const Header = require("../components/Header");
-const Footer = require("../components/Footer");
+import React from "react";
+import ReactDOM from "react-dom";
+import $ from "jquery";
+import Foundation from 'foundation-sites';
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
-const Layout = ({children}) => (
-  <>
-    <Header />
+class Layout extends React.Component {
 
-    {children}
+  constructor(props) {
+    super(props);
+  }
 
-    <Footer />
-  </>
-)
+  componentDidMount(){
+    $(document).foundation();
+  }
 
-module.exports = Layout;
+  render(){
+    return (
+      <>
+        <Header />
+
+        {this.props.children}
+
+        <Footer />
+      </>
+    )
+  }
+}
+
+export default Layout;
