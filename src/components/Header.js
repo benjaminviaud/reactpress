@@ -7,7 +7,7 @@ const Header = () => (
     <div className="top-bar-left">
       <a href='/' className='bold secondary'>ReactPress</a>
     </div>
-    <div class="top-bar-right">
+    <div className="top-bar-right">
       <Nav />
     </div>
   </div>

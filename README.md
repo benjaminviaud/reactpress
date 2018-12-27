@@ -21,6 +21,7 @@ Starter theme for Wordpress
 - prop-types or typescript or flow for typechecking ?
 - tree-shaking
 - 404 error (At the moment .htaccess redirect 404 error to index.html => patch to resolve url 404 not found);
+- finish the processing of the request in Nav.js
 
 ## Improvements to plan
 - method fetch in components/Nav.js

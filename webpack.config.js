@@ -9,6 +9,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const autoprefixer = require('autoprefixer');
+const webpack = require('webpack');
 
 // Mode development or production
 const mode = process.env.NODE_ENV;
@@ -110,7 +111,10 @@ module.exports = {
     ]
   },
   plugins: [
-    new MiniCssExtractPlugin()
+    new MiniCssExtractPlugin(),
+    new webpack.ProvidePlugin({
+      '$': 'jquery'
+    })
   ],
   optimization: {
     minimizer: [
@@ -120,5 +124,5 @@ module.exports = {
       }),
       new OptimizeCSSAssetsPlugin()
     ]
-  },
+  }
 };

@@ -1,54 +1,36 @@
-const React = require ("react");
-const ReactDOM = require ("react-dom");
-const { BrowserRouter: Router, Route, Link} = require('react-router-dom');
+import React from "react";
+import ReactDOM from "react-dom";
+import { BrowserRouter as Router, Route, Link} from 'react-router-dom';
+import { DropdownMenu } from 'foundation-sites';
 
 class Nav extends React.Component{
 
-  constructor(props){
-    super(props);
-    this.state = {
-      items: []
-    }
-  }
-
   componentDidMount(){
-    fetch("https://demo.wp-api.org/wp-json/wp/v2/pages")
-    .then(res => res.json())
-    .then(
-      (result) => {
-        this.setState({
-          items: result
-        })
-      }
-    )
+    const $DropdownMenu = new DropdownMenu($('.dropdown'));
   }
 
   render(){
-    const { items } = this.state;
 
     return(
       <Router >
-        <div>
-          <ul>
-            {items.map(item => (
-              <li key={item.id}>
-                 <Link to={"/"+item.slug}>{item.title.rendered}</Link>
-              </li>
-            ))}
+        <>
+          <ul className='dropdown menu' data-dropdown-menu>
+            <li>
+              <a href="#">One</a>
+              <ul className="menu vertical">
+                <li><a href="#">One</a></li>
+                <li><a href="#">Two</a></li>
+                <li><a href="#">Three</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Two</a></li>
+            <li><a href="#">Three</a></li>
           </ul>
-            {items.map((item, index) => (
-              <Route
-                key={index}
-                path={"/"+item.slug}
-                exact={true}
-                component={() => <div dangerouslySetInnerHTML={ {__html: item.excerpt.rendered} } />}
-              />
-            ))}
-        </div>
+        </>
       </Router>
     )
   }
 
 }
 
-module.exports = Nav;
+export default Nav;
