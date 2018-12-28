@@ -63,6 +63,15 @@ module.exports = {
     filename: '[name].js',
     path: path.resolve(__dirname, 'public')
   },
+  devServer: {
+    contentBase: path.resolve(__dirname, 'public'),
+    compress: true,
+    port: 9000,
+    //for error in web browser
+    overlay: true,
+    disableHostCheck: true,
+    open: true
+  },
   module:{
     rules: [
       {
@@ -71,7 +80,8 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env','@babel/preset-react']
+            presets: ['@babel/preset-env','@babel/preset-react'],
+            plugins: ["react-hot-loader/babel"]
           }
         }
       },

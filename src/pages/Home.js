@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import Layout from "../components/layout";
+import { hot } from 'react-hot-loader/root'
 
 const Home = () => (
   <Layout>
@@ -16,4 +17,4 @@ const Home = () => (
   </Layout>
 )
 
-export default Home;
+export default hot(Home);
