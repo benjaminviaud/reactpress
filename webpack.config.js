@@ -56,7 +56,7 @@ function loadConfig(){
 
 module.exports = {
   entry: {
-    app: ['./src/assets/scss/app.scss', './src/index.js']
+    app: ['./src/index.js']
   },
   mode: mode,
   output: {

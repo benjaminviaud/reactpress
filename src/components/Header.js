@@ -1,6 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom";
-import Nav from "./Nav";
+import Menu from "./Menu";
 
 const Header = () => (
   <div className="top-bar">
@@ -8,7 +7,7 @@ const Header = () => (
       <a href='/' className='bold secondary'>ReactPress</a>
     </div>
     <div className="top-bar-right">
-      <Nav />
+      <Menu />
     </div>
   </div>
 )
