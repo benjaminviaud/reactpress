@@ -1,17 +1,19 @@
 import React from "react";
 import Layout from "../components/Layout";
+import { GridContainer, Grid, Cell } from 'react-foundation';
+
 
 const Home = () => (
   <Layout>
-    <div className='grid-container'>
-      <div className='grid-x'>
-        <div className='cell large-12'>
+    <GridContainer>
+      <Grid>
+        <Cell large={12}>
           <h1 className='m-t-l'>ReactPress</h1>
           <p>the React starter-theme for Wordpress built on Foundation by Zurb.</p>
           <a href='https://github.com/benjaminviaud/reactpress' className='button large primary'>Downloading ReactPress</a>
-        </div>
-      </div>
-    </div>
+        </Cell>
+      </Grid>
+    </GridContainer>
   </Layout>
 )
 

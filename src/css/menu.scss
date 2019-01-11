@@ -1,9 +1,0 @@
-// Menu-based containers
-@include foundation-menu;
-@include foundation-dropdown-menu;
-@include foundation-top-bar;
-
-//custom style
-.dropdown.menu > li > a {
-  background: green;
-}

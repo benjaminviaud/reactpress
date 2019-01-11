@@ -6,9 +6,8 @@
   "author": "benjaminviaud",
   "license": "MIT",
   "scripts": {
-    "build": "NODE_ENV=development webpack-dev-server --hot",
-    "bundle": "NODE_ENV=production webpack",
-    "start": "node_modules/.bin/browserify src/index.js -o public/app.js -t [ babelify --presets [ @babel/preset-env @babel/preset-react ] ]"
+    "start": "NODE_ENV=development webpack-dev-server --hot",
+    "bundle": "NODE_ENV=production webpack"
   },
   "dependencies": {
     "jquery": "^3.3.1",
@@ -38,6 +37,8 @@
     "postcss-import": "^12.0.1",
     "postcss-loader": "^3.0.0",
     "postcss-preset-env": "^6.5.0",
+    "prop-types": "^15.6.2",
+    "react-foundation": "^0.9.6",
     "react-hot-loader": "^4.6.3",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
